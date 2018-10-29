@@ -28,7 +28,7 @@ channel.queue_declare(queue='log-analysis')
 
 # Read weblogs
 
-f = open('weblogs.log', 'r')
+f = open('weblogs.log', 'r', encoding="latin-1")
 
 while True:
     try:
@@ -42,7 +42,7 @@ while True:
             day, status, source = parse_log(msg)
 
             # Store in RabbitMQ
-            body = json.dumps({'day': str(day), 'status': status})
+            body = json.dumps({'source': source, 'day': str(day), 'status': status})
             channel.basic_publish(exchange='',
                                   routing_key='log-analysis',
                                   body=body)

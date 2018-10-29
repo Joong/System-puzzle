@@ -12,6 +12,8 @@ services:
     build: .
     env_file:
       - env_file
+    ports:
+     - "5000:5000"
     volumes:
       - .:/opt/services/flaskapp/src
     networks:
@@ -41,7 +43,7 @@ services:
     depends_on:
       - rabbit
     ports:
-     - "80:5672"
+     - "5674:5674"
   processing:
     build: processing/.
     env_file:
@@ -53,11 +55,11 @@ services:
     depends_on:
       - rabbit
     ports:
-     - "81:5672"
+     - "5673:5673"
   nginx:
     image: "nginx:1.13.5"
     ports:
-      - "80:8080"
+      - "8080:8080"
     volumes:
       - ./conf.d:/etc/nginx/conf.d
     networks:
