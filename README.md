@@ -1,4 +1,4 @@
-# Insight DevOps Engineering System Puzzle: Weblog
+# Insight DevOps Engineering System Puzzle: Weblog - Solution
 
 ## Table of Contents
 1. [Understanding the puzzle](README.md#understanding-the-puzzle)
@@ -51,8 +51,8 @@ For the purpose of this challenge, a request is considered successful if it retu
 
 The challenge consists of the following parts:
 
-- **Correct the bugs to have the basic features working** - The weblogs should get processed, the results should be stored in the database and the webapp should display the rate of successful GET requests.
-- **(Extra Credit) Extend the functionality:** The data scientists suspect that local GET requests behave differently than remote GET requests. To help them investigate their suspicion, modify the platform so that it determines and displayes the rate of successful GET requests for local and remote requests separately.
+- **Correct the bugs to have the basic features working** - The weblogs should get processed, the results should be stored in the database and the webapp should display the rate of successful GET requests.  (Completed)
+- **(Extra Credit) Extend the functionality:** The data scientists suspect that local GET requests behave differently than remote GET requests. To help them investigate their suspicion, modify the platform so that it determines and displayes the rate of successful GET requests for local and remote requests separately. (Completed)
 
 
 Once you've corrected the bugs and have the basic features working, commit the functional codebase to a new repo following the instructions below. As you debug the system, you should keep track of your thought process and what steps you took to solve the puzzle.
